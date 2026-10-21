@@ -10,3 +10,6 @@ class CartItem:
 
     def is_valid(self):
         return self.product.stock_count >= self.quantity
+
+    def __str__(self):
+        return f"{self.product.name}: {self.quantity}"

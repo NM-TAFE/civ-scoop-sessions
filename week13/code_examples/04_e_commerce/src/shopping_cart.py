@@ -11,3 +11,10 @@ class ShoppingCart:
             return
 
         self.products.append(cart_item)
+
+    def __str__(self):
+        final_string = ""
+        for element in self.products:
+            final_string += str(element) + "\n"
+
+        return final_string
