@@ -1,11 +1,11 @@
 class Product:
-    def __init__(self):
-        self.name = ""
-        self.description = ""
-        self.unit_cost = ""
-        self.barcode_number = ""
-        self.stock_count = 0
-        self.discount_amount = 0
+    def __init__(self, name="", description="", unit_cost=0, barcode_number="", stock_count=0, discount_amount=0):
+        self.name = name
+        self.description = description
+        self.unit_cost = unit_cost
+        self.barcode_number = barcode_number
+        self.stock_count = stock_count
+        self.discount_amount = discount_amount
 
     def is_valid(self):
         valid = len(self.name) > 1 and \
