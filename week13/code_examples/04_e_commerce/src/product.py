@@ -20,5 +20,5 @@ class Product:
 
     def __str__(self):
         return  f"{self.name}: {self.description}\n" + \
-                f"${round(self.unit_cost/100, 2)}\n" + \
+                f"${round(self.unit_cost/100, 2):.2f}\n" + \
                 f"{self.barcode_number}"

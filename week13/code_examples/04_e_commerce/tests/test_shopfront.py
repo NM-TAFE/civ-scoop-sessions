@@ -27,7 +27,12 @@ class TestShopfront(TestCase):
         product.barcode_number = "abc123"
         shopfront.add_product(product)
 
-        # Bad test?
+        # Bad test? BRITTLE!
         # Okay for now though!
-        self.assertEqual(str(shopfront), "Apple: A fruit\n$1.5\nabc123\n")
-        # To fix this, we want to mock and stub!
+        self.assertEqual(str(shopfront), "Apple: A fruit\n$1.50\nabc123\n")
+        # To fix this, we want to mock and stub in reality!
+        """
+        This is imaginary! To my knowledge, unittest doesn't have the facility to mock or stub
+        product = Mock(Product) # or a spy
+        self.assertCalled(product, "__str__")
+        """
